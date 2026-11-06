@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзина — Шины РФ</title>
+  <meta name="description" content="Корзина прототипа каталога шин. Количество хранится в браузере. Оформление заказа не создаёт покупку.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#cart">К содержимому корзины</a>
+  <header class="wrap site-header">
+    <a class="brand" href="index.html">
+      <strong>Шины РФ</strong>
+      <span>Прототип каталога</span>
+    </a>
+    <nav class="nav" aria-label="Страницы">
+      <a href="index.html">Каталог</a>
+      <a href="cart.html" aria-current="page">Корзина <span class="count" data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="cart">
+    <div class="page-intro">
+      <p class="eyebrow">Прототип каталога</p>
+      <h1>Корзина</h1>
+      <p class="lede">Количество хранится в этом браузере. Сумма собрана из цен-образцов и не является счётом.</p>
+      <p><a class="btn btn-secondary" href="index.html">Назад в каталог</a></p>
+    </div>
+
+    <div class="cart-layout">
+      <div>
+        <div class="empty" data-cart-empty hidden>
+          <h2>Корзина пуста</h2>
+          <p>Добавьте шину из каталога. После этого здесь появятся количество, сумма и кнопка демо-оформления.</p>
+          <a class="btn btn-primary" href="index.html">Перейти в каталог</a>
+        </div>
+        <div class="lines" data-cart-list></div>
+      </div>
+      <aside class="summary" data-cart-summary hidden>
+        <h2>Сумма образца</h2>
+        <p class="specs">Позиций в штуках: <span data-cart-units>0</span></p>
+        <p class="total"><span>Итого</span><strong data-cart-total>0 ₽</strong></p>
+        <button type="button" class="btn btn-primary" data-demo-order aria-describedby="demo-note">Оформление заказа — демо</button>
+        <p class="demo-note" id="demo-note" data-demo-note aria-live="polite">Кнопка не создаёт заказ и не отправляет данные.</p>
+      </aside>
+    </div>
+  </main>
+
+  <section class="closing">
+    <div class="wrap closing-grid">
+      <div>
+        <h2>Контакты ещё не подключены</h2>
+        <p class="section-lead">Те же заглушки, что на каталоге. Нажатие не открывает телефон и не ведёт в мессенджер.</p>
+      </div>
+      <div class="contact-block">
+        <p class="contact-note">Контакты будут добавлены</p>
+        <div class="contact-actions">
+          <button type="button" class="btn btn-secondary" title="Контакты будут добавлены" aria-label="Позвонить. Контакты будут добавлены">Позвонить</button>
+          <button type="button" class="btn btn-secondary" title="Контакты будут добавлены" aria-label="MAX, Макс. Контакты будут добавлены">MAX</button>
+          <button type="button" class="btn btn-secondary" title="Контакты будут добавлены" aria-label="Telegram. Контакты будут добавлены">Telegram</button>
+        </div>
+      </div>
+    </div>
+    <footer class="wrap site-footer">
+      <p>Шины РФ · прототип каталога. Бренд и контакты — заглушки.</p>
+      <p class="fine">Фотографии уменьшены локально. Авторы и лицензии — в <a href="ASSET_SOURCES.md">ASSET_SOURCES.md</a>.</p>
+    </footer>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>

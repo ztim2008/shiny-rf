@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Шины РФ — прототип каталога</title>
+  <meta name="description" content="Прототип каталога шин для легковой, коммерческой и грузовой техники. Лето и зима, цены-образцы. Заказ не оформляется.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#catalog">К каталогу</a>
+  <header class="wrap site-header">
+    <a class="brand" href="index.html">
+      <strong>Шины РФ</strong>
+      <span>Прототип каталога</span>
+    </a>
+    <nav class="nav" aria-label="Страницы">
+      <a href="index.html" aria-current="page">Каталог</a>
+      <a href="cart.html">Корзина <span class="count" data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Прототип каталога</p>
+        <h1>Шины для трёх типов техники</h1>
+        <p class="lede">Демонстрационный каталог с фотографиями реальных шин. В выборке есть лето и зима, легковые, коммерческие и грузовые позиции. Цены — образец, не предложение магазина. Заказ отсюда не создаётся.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalog">Смотреть каталог</a>
+          <a class="btn btn-secondary" href="cart.html">Корзина <span class="count" data-cart-count>0</span></a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <picture>
+          <source srcset="assets/img/wintrac-pro.webp" type="image/webp">
+          <img src="assets/img/wintrac-pro.jpg" alt="Зимняя шина Vredestein Wintrac Pro 205/45 R17 на бетоне" width="1149" height="1400">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="wrap" aria-label="Что есть в прототипе">
+      <div class="facts">
+        <p class="fact"><span class="eyebrow">Техника</span><strong>3 типа техники</strong></p>
+        <p class="fact"><span class="eyebrow">Сезон</span><strong>2 сезона</strong></p>
+        <p class="fact"><span class="eyebrow">Цены</span><strong>Образец каталога</strong></p>
+      </div>
+    </section>
+
+    <section class="wrap section" id="catalog">
+      <div class="section-head">
+        <h2>Каталог</h2>
+        <p class="section-lead">Модель указана только там, где она читается на шине или в подписи исходного снимка. Зимние карточки в этой выборке — легковые: для коммерческих и грузовых шин в открытых архивах нашлись летние и дорожные фото. У части грузовых и коммерческих шин на боковине есть M+S — это отмечено в характеристиках, сезон фильтра при этом летний.</p>
+      </div>
+
+      <div class="tools">
+        <div class="tool-row" role="group" aria-label="Тип техники">
+          <span class="tool-label">Техника</span>
+          <button type="button" class="chip" data-equip="" aria-pressed="true">Все</button>
+          <button type="button" class="chip" data-equip="passenger" aria-pressed="false">Легковой автомобиль</button>
+          <button type="button" class="chip" data-equip="commercial" aria-pressed="false">Коммерческая техника</button>
+          <button type="button" class="chip" data-equip="truck" aria-pressed="false">Грузовая техника</button>
+        </div>
+        <div class="tool-row" role="group" aria-label="Сезон">
+          <span class="tool-label">Сезон</span>
+          <button type="button" class="chip" data-season="" aria-pressed="true">Все</button>
+          <button type="button" class="chip" data-season="summer" aria-pressed="false">Лето</button>
+          <button type="button" class="chip" data-season="winter" aria-pressed="false">Зима</button>
+        </div>
+        <label class="tool-row">
+          <span class="tool-label" for="catalog-search">Поиск</span>
+          <input id="catalog-search" class="search" type="search" data-search placeholder="Модель, размер или бренд" autocomplete="off">
+        </label>
+      </div>
+
+      <p class="result-line"><span data-result-count>В выборке 16 шин</span></p>
+      <p class="visually-hidden" data-cart-status aria-live="polite"></p>
+      <div class="grid" data-grid></div>
+      <div class="empty" data-empty hidden>
+        <h2>Ничего не найдено</h2>
+        <p>В этой выборке нет шин с таким сочетанием фильтра и поиска.</p>
+        <button type="button" class="btn btn-secondary" data-reset>Сбросить фильтр</button>
+      </div>
+      <noscript>
+        <p class="section-lead">Каталог и корзина включаются скриптом в браузере.</p>
+      </noscript>
+    </section>
+
+    <section class="band" aria-labelledby="flow-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="flow-title">Как устроен прототип</h2>
+          <p class="section-lead">Это описание самой страницы, не условия магазина. Сроков поставки, адресов и наличия здесь нет.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span>01</span>
+            <h3>Выбор в каталоге</h3>
+            <p>Фильтр по технике и сезону и поиск по названию или размеру. На карточке видны фото, короткие характеристики и цена-образец.</p>
+          </article>
+          <article class="step">
+            <span>02</span>
+            <h3>Корзина браузера</h3>
+            <p>Количество хранится в localStorage этого браузера и не отправляется на сервер. Счётчик в шапке совпадает на обеих страницах.</p>
+          </article>
+          <article class="step">
+            <span>03</span>
+            <h3>Без оформления</h3>
+            <p>Кнопка «Оформление заказа — демо» не создаёт заказ, не показывает успех и ничего не отправляет.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="closing">
+    <div class="wrap closing-grid">
+      <div>
+        <h2>Контакты ещё не подключены</h2>
+        <p class="section-lead">Кнопки ниже — заглушки прототипа. Телефон, MAX и Telegram не указаны специально: выдуманных номеров и имён здесь нет.</p>
+      </div>
+      <div class="contact-block">
+        <p class="contact-note">Контакты будут добавлены</p>
+        <div class="contact-actions">
+          <button type="button" class="btn btn-secondary" title="Контакты будут добавлены" aria-label="Позвонить. Контакты будут добавлены">Позвонить</button>
+          <button type="button" class="btn btn-secondary" title="Контакты будут добавлены" aria-label="MAX, Макс. Контакты будут добавлены">MAX</button>
+          <button type="button" class="btn btn-secondary" title="Контакты будут добавлены" aria-label="Telegram. Контакты будут добавлены">Telegram</button>
+        </div>
+      </div>
+    </div>
+    <footer class="wrap site-footer">
+      <p>Шины РФ · прототип каталога. Бренд и контакты — заглушки.</p>
+      <p class="fine">Фотографии уменьшены локально. Авторы и лицензии — в <a href="ASSET_SOURCES.md">ASSET_SOURCES.md</a>.</p>
+    </footer>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>
